@@ -5,8 +5,8 @@ class Hand {
 	burned: Boolean = false
 
 	constructor(card: Card[]) {
-		this.card = card
-		this.score = this.score
+		this.card 	= card
+		this.score 	= this.score
 		this.burned = this.burned
 	}
 
@@ -40,8 +40,8 @@ class Hand {
 					bg = Number(bg) + Number(e.getValue());
 					if (i == this.card.length) {
 						if (bg >= 21) {
-							return false;
 							this.isBurn();
+							return false;
 						} else {
 							return true
 						}

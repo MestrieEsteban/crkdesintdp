@@ -3,13 +3,15 @@ class Card {
 	value 		: Value;
 	color 		: Color;
 	enseigne 	: Enseigne;
-	visible 	: Boolean;
+	visible 	: Boolean = false;
+	burn		: Boolean = false;
 
 	constructor(value : Value, color: Color, enseigne: Enseigne){
-		this.value = value
-        this.color = color
-        this.enseigne = enseigne
-        this.visible = this.visible
+		this.value 		= value
+        this.color 		= color
+        this.enseigne 	= enseigne
+        this.visible 	= this.visible
+        this.burn 		= this.burn
 	}
 
 	getValue():Number{
@@ -36,8 +38,8 @@ class Card {
 		}
 	}
 
-	getAll():Card{
-		return this;
+	updateBurn(){
+		this.burn = true;
 	}
 
 
